@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  --darkgrey: rgb(24, 24, 24);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans;
+  font-size: 18px;
+  color: var(--darkgrey);
+  /* border: 1px solid */
+}
+.title-font {
+  font-family: Libre Baskerville;
+}
+h3 {
+  font-size: 1.3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+/* Header */
+@media only screen and (max-width: 900px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    margin-bottom: 80px;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 99vw;
+    z-index: 10;
+  }
+  /* Username */
+  .header .right .toggle-menu .user {
+    list-style: none;
+    text-align: end;
+    margin-top: 0;
+    display: none;
+  }
+  .header .right .toggle-menu .user li {
+    margin-top: 10px;
+  }
+  .header .right .toggle-menu .user .logout {
+    display: none;
+  }
+  .header .right .toggle-menu .user .logout.active {
+    display: block;
+  }
+  .header .right .toggle-menu .user.active {
+    position: relative;
+    display: block;
+  }
+  /* Username */
+  .header.box-shadow {
+    box-shadow: 0px 10px 40px rgb(211, 211, 211);
+  }
+  .header .left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .header .left .span1 {
+    font-size: 1.8rem;
+  }
+  .header .left .span2 {
+    display: none;
+    font-size: 1.8rem;
+  }
+  .header .left .span1:hover {
+    cursor: pointer;
+  }
+  .header .left .span1.disappeared {
+    display: none;
+  }
+  .header .left .span2.appeared {
+    display: block;
+    cursor: pointer;
+  }
+  .header .left.appeared b {
+    margin-top: 5px;
+  }
+  .header .right {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+    justify-content: center;
+  }
+  .header .right.appeared .toggle-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .header .right.appeared .shopping-bag {
+    margin-top: 5px;
+  }
+  .header .right.appeared .toggle-menu a {
+    text-decoration: none;
+    color: black;
+    margin: 10px 0;
+  }
+  .header .left.appeared {
+    display: flex;
+    align-items: flex-start;
+  }
+  .header .shopping-bag {
+    display: flex;
+    gap: 5px;
+  }
+  .header .right .toggle-menu {
+    display: none;
+  }
+  .header a {
+    padding-bottom: 5px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+
+    margin-bottom: 80px;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 99vw;
+    z-index: 10;
+  }
+
+  .header .right .toggle-menu .user {
+    position: absolute;
+    list-style: none;
+    top: 30px;
+    right: -18px;
+    display: none;
+  }
+  .header .right .toggle-menu .user li a {
+    padding-bottom: 8px;
+  }
+  .header .right .toggle-menu .user li {
+    margin-bottom: 8px;
+  }
+  .header .right .toggle-menu .user .logout {
+    display: none;
+  }
+  .header .right .toggle-menu .user .logout.active {
+    display: block;
+  }
+  .header .right .toggle-menu .user.active {
+    display: block;
+  }
+
+  .header.box-shadow {
+    box-shadow: 0px 10px 40px rgb(211, 211, 211);
+  }
+  h1 {
+    font-size: 3.5rem;
+    width: 60vw;
+    margin: 0 auto;
+  }
+
+  .header b {
+    font-size: 1.3rem;
+  }
+  .header .left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .header .right {
+    display: flex;
+    gap: 30px;
+  }
+  .header .right .toggle-menu {
+    display: flex;
+    gap: 30px;
+    position: relative;
+  }
+  .header .right a {
+    color: black;
+    text-decoration: none;
+  }
+  .header .shopping-bag {
+    display: flex;
+    gap: 5px;
+  }
+  .header .left span {
+    display: none;
+  }
+  .header .left ion-icon {
+    display: none;
+  }
+}
+.header .right a {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.header .right a.active {
+  border-bottom: 1px solid var(--darkgrey);
+}
+.header .right p {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+#clickon-btn {
+  display: none;
+}
+.header .right .shopping-bag a {
+  text-decoration: none;
+}
+/* .header .right .toggle-menu .active {
+    border-bottom: 1px solid;
+  } */
+.header .left .style2 {
+  display: block;
+}
+.header .left b:hover {
+  cursor: pointer;
+}
+.header .right a.active {
+  border-bottom: 1px solid black;
+}
+.header .right a:hover {
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+.header .right .shopping-bag p:hover {
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+/* username  */
+.signup.disable {
+  display: none;
+  visibility: hidden;
+}
+.signin.disable {
+  display: none;
+  visibility: hidden;
+}
+.userName.disable {
+  display: none;
+  visibility: hidden;
+}
+.userName {
+  font-family: Open Sans;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+/* username */
+
+/* Header */
+
+/* Part 4: Footer */
+.footer {
+  background: rgba(196, 164, 132, 20%);
+  padding: 50px 15px 70px 15px;
+  text-align: center;
+}
+.footer h4 {
+  margin-bottom: 40px;
+}
+.footer label {
+  display: block;
+  text-align: left;
+}
+.footer input {
+  width: calc(100%);
+  padding: 15px 15px;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+}
+.footer button {
+  background: rgb(24, 24, 24);
+  color: white;
+  padding: 15px 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.footer .social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+.footer .social-media i {
+  color: var(--darkgrey);
+  font-size: 1.5rem;
+}
+.footer form {
+  max-width: 376px;
+  width: calc(100% -20px);
+  margin: 0 auto;
+}
+@media only screen and (min-width: 900px) {
+  .footer h4 {
+    margin-top: 60px;
+  }
+  .footer .social-media {
+    margin-bottom: 100px;
+  }
+}
+.footer button:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+.footer .social-media i:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+.footer .style {
+  color: grey;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.footer .style1 {
+  color: grey;
+  text-align: center;
+  margin-bottom: 20px;
+}

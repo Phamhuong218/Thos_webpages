@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Bag</title>
+    <link rel="stylesheet" href="shopingbag.css" />
+    <link rel="stylesheet" href="../home/Thos_header_footer.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body onscroll="headerBoxShadow()">
+    <div class="app">
+      <div class="page">
+        <div class="header" id="header-part">
+          <div class="left" id="left-part">
+            <ion-icon
+              name="menu-outline"
+              class="toggleMenu span1"
+              onclick="toggleMenuFunction()"
+              id="menu-icon"
+            ></ion-icon>
+            <span
+              class="material-icons-outlined span2"
+              onclick="closeToggleMenu()"
+              id="close-icon"
+            >
+              close
+            </span>
+            <a
+              href="../home/Thos_home.html"
+              style="text-decoration: none; color: #333"
+              ><b class="title-font">Thos</b></a
+            >
+          </div>
+          <div class="right" id="right-part">
+            <div class="toggle-menu">
+              <a href="../blog/blog.html">Blog</a>
+              <a href="../shop/shop.html" class="active">Shop</a>
+              <a href="#" class="btn-user">User</a>
+                <ul class="user">
+                  <li>
+                    <a href="../signinup/signup.html" class="signup">Sign up</a>
+                  </li>
+                  <li><a href="../signinup/signin.html" class="signin">Log in</a></li>
+                  <li class="logout"><a href="#" onclick="logOut()">Log Out</a></li>
+                </ul>
+            </div>
+            <div class="shopping-bag" >
+              <ion-icon class="icon-cart" name="bag-outline"></ion-icon>
+              <a id="bag1" href="../shopingbag/shopingbag.html"
+                >Shopping bag (0)</a>
+            </div>
+          </div>
+        </div>
+        <div class="banner">
+          <p>Shop</p>
+        </div>
+        <div class="shopingcart">
+          <div class="cart-header"
+               onmouseover="changeColor()"
+               onmouseout="oldColor()"
+               id="shop-bag">
+            <ion-icon class="icon-cart" name="bag-outline"></ion-icon>
+            <a href="#" id="bag2" class="not-active"> Shopping bag (1)</a>
+          </div>
+          <div class="cart-background">
+            <div class="detail-cart">
+              <div class="store">
+                <div class="page-title">
+                  <h3 class="title-font">Shopping cart</h3>
+                  <a href="../shop/shop.html">Store</a>
+                  <span>/</span>
+                  <a href="../shopingbag/shopingbag.html">Shoping cart</a>
+                </div>
+                <div class="info">
+                  <img src="../img/item.png" alt="" />
+                  <div class="info-background">
+                    <div class="name">
+                      <a href="../shop/shop.html">The best of Thos</a>
+                      <ion-icon name="close-outline" id="close-item"></ion-icon>
+                    </div>
+                    <div class="price">
+                      <span class="qty">
+                        Qty:
+                        <div class="dropbox">
+                          <select name="qty" id="dropbox-select">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                          </select>
+                        </div>
+                      </span>
+
+                      <span id="price1">$49.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="total">
+                  <div class="total-price">
+                    <p>TOTAL</p>
+                    <span id="price2">$49.00</span>
+                  </div>
+                  <div class="total-price-title">
+                    <span
+                      >Looking for more?
+                      <a href="../shop/shop.html">Continue shopping</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout">
+                <h3 class="title-font">Checkout</h3>
+                <span>
+                  Enter your email address. This address will be used to send
+                  you order status updates.
+                </span>
+                <input
+                  type="text"
+                  class="email"
+                  placeholder="Your email address"
+                />
+                <span>
+                  <input type="checkbox" class="btncheckbox" />Keep me up to
+                  date on news and exclusive offers</span
+                >
+                <div class="btncheckout">
+                  <button>checkout</button>
+                  <div class="data">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <span>
+                      All data is transmitted encrypted via a secure TLS
+                      connection
+                    </span>
+                  </div>
+                </div>
+                <div class="next-title">
+                  <h4>Next</h4>
+                  <span
+                    >Payment information <br />
+                    Choose a payment method and enter your payment
+                    details.</span
+                  >
+                  <span
+                    >Order confirmation
+                    <br />
+                    Place your order and receive a confirmation email.</span
+                  >
+                </div>
+              </div>
+              <div class="empty close">
+                <span> Your shopping cart is empty</span>
+                <a href="../shop/shop.html"><button>Browse Store</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <h4>Subscribe to our newsletter</h4>
+          <form>
+            <label>Email address*</label>
+            <input type="email" placeholder="Your email address" />
+          </form>
+          <button>Subscribe</button>
+          <div class="social-media">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../home/Thos_home.js"></script>
+    <script src="shopingbag.js"></script>
+
+  </body>
+</html>

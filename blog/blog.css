@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+
+:root {
+  --darkgrey: rgb(24, 24, 24);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans;
+  font-size: 18px;
+  color: var(--darkgrey);
+  /* border: 1px solid */
+}
+
+.title-font {
+  font-family: Libre Baskerville;
+}
+h3 {
+    font-size: 1.3rem;
+}
+@media only screen and (max-width: 900px) {
+    .container1 {
+      margin: 150px 10px 0 10px;
+    }
+    .container1 h1 {
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+      padding: 20px;
+      width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .container1 img {
+      width: calc(100%);
+    }
+    .container1 .article h3 {
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+    .container1 .article p {
+      margin-bottom: 25px;
+      text-align: left;
+    }
+    .container1 .article span {
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+  }
+  @media only screen and (min-width: 900px) {
+
+    h1 {
+      font-size: 3.5rem;
+      width: 60vw;
+      margin: 0 auto;
+    }
+
+    .container1 h1 {
+      margin-top: 220px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+  
+    .container1 .article-gallery {
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px;
+    }
+    .container1 .article img {
+      width: calc(100%);
+    }
+    .container1 .article h3 {
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+    .container1 .article p {
+      margin-bottom: 25px;
+      text-align: left;
+    }
+    .container1 .article span {
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+  }
+  .container1 .article a {
+    text-decoration: none;
+  }
+  .container1 .article p {
+    font-weight: 300;
+  }
+
+  
